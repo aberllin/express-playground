@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script src="/js/bootstarp.min.js"></script>
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Welcome on our posts platform!</h1>
+    <h2>Check what young authors write.</h2>
+    <ul class="list-group ms-3 me-3">
+    <% postsData.forEach((post) => { %>
+        <li class="list-group-item">
+          <div><b>The author:</b> <%= post.author %></div>
+          <div class="text-secondary">Email address: <%= post.email %></div>
+          <div><b>Views:</b> <%= post.views %></div>
+          <div class="mt-2"><%= post.post %></div>
+        </li>
+      <% }); %>
+    </ul>
+</body>
+</html>
+
